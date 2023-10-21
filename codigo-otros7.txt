@@ -1,0 +1,62 @@
+// Nombre: Ingrid Jeraldin Martínez Sánchez
+// Rúbrica: 4/5 Competente
+
+
+// Ejercicio: Revisión de Código de otros 7
+
+// https://gist.github.com/eduardojesus12/74fe0c7ebbd86ddf56b1e204bb885391
+
+// ========================
+//         Solución 
+// ========================
+
+package generation.revisionCodigoOtros7;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Código7 {
+	//Agregar linea public static void...
+	public static void main(String args[]) {
+		
+		//Agregar objeto Scanner
+		Scanner scanner = new Scanner(System.in);
+		
+		//Cambiar '<Byte, Double>' por '<String, String>' y 'c' por 'capitales'
+	    HashMap<String, String> capitales = new HashMap<>();
+
+	    capitales.put("Canada", "Ottawa"); //Corregir nombre de 'Ottawa'
+	    capitales.put("Estados Unidos", "Washington DC");
+	    capitales.put("Mexico", "Mexico DF");
+	    capitales.put("Belice", "Belmopan");
+	    capitales.put("Costa rica", "San Jose");
+	    capitales.put("El Salvador", "San Salvador"); //Agregar "San Salvador"
+	    capitales.put("Guatemala", "Ciudad de Guatemala");
+	    capitales.put("Honduras", "Tegucigalpa");
+	    capitales.put("Nicaragua", "Managua");
+	    capitales.put("Panama", "Panama");
+	   
+	    //Cambiar 'Sting' por 'String y 'c' por 'país'
+	    String país = "";
+	    
+	    do {
+	    	//Cambiar 'in' por 'out'
+	      System.out.print("Escribe el nombre de un país y te diré su capital: ");
+	      país = scanner.nextLine(); //Cambiar '.nextDouble' por 'nextLine;
+	      
+	      if (!país.equals("salir")) {
+	    	// cambiar containValue por continsKey ya que los paises estan en las llaves de la variable capital.
+	        if (capitales.containsKey(país)) { //Cambiar 'ca' por capitales y 'c' por país
+	          System.out.print("La capital de " + país); //Agregar '.out' y cambiar 'c' por 'país'
+	          System.out.println(" es " + capitales.get(país)); //Agregar 'ln' y cambiar 'c' por país y 'put' por 'get'
+	        } else {
+	          System.out.print("No conozco la respuesta ");
+	          System.out.print("¿cuál es la capital de " + país + "?: "); //Cambiar 'c' por 'país'
+	          String newCapital = scanner.nextLine(); //Cambiar 'ca' por 'newCapital'
+	          capitales.put(país, newCapital); //Cambiar 'ca' por 'capitales', 'c' por 'país' y 'ca' por 'newCapital'
+	          System.out.println("Gracias por enseñarme nuevas capitales");
+	        }
+	      }
+	    } while (!país.equals("salir")); //Cambiar 'wile' por 'while, agregar ')' al final
+	 }	
+}
